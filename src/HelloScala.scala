@@ -30,8 +30,8 @@ object HelloScala {
     val motherAge = largePerson1.age
     println(s"$motherName is $motherAge years old.")
 
-    largePerson1.offspring = largePerson1.offspring.+:(smallPerson)
-    largePerson1.offspring = largePerson1.offspring.+:(mediumPerson)
+    largePerson1.offspring :+ smallPerson
+    largePerson1.offspring :+ mediumPerson
 
     println(s"$motherName's children are:")
     for (c <- largePerson1.offspring) println(c.firstName + " " + c.lastName)
@@ -41,15 +41,15 @@ object HelloScala {
     largePerson2.lastName = "Smith"
     largePerson2.age = largePerson2.findAgeByIndex(12)
 
-    largePerson2.offspring = largePerson2.offspring.+:(smallPerson)
-    largePerson2.offspring = largePerson2.offspring.+:(mediumPerson)
+    largePerson2.offspring :+ smallPerson
+    largePerson2.offspring :+ mediumPerson
 
     val fatherName = largePerson2.firstName + " " + largePerson2.lastName
     val fatherAge = largePerson2.age
     println(s"$fatherName is $fatherAge years old.")
 
-    smallPerson.parents = smallPerson.parents.+:(largePerson1)
-    smallPerson.parents = smallPerson.parents.+:(largePerson2)
+    smallPerson.parents :+ largePerson1
+    smallPerson.parents :+ largePerson2
 
     println(s"$childName's parents are:")
     for (p <- smallPerson.parents) println(p.firstName + " " + p.lastName)
