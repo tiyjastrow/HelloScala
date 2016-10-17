@@ -1,4 +1,3 @@
-import scala.util.Random
 
 /**
   * Created by joe on 10/17/16.
@@ -14,9 +13,6 @@ object Car {
   var engine = 2
   var gas = 0
   var seats = 4
-
-
-  //Random.nextInt(seats)
 
   def main(args: Array[String]): Unit = {
     println(s"You have $wheels wheels on your car")
