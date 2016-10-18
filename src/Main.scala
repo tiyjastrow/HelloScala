@@ -6,10 +6,15 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 
-    val rick = new Person("Rick", 65, "Male")
-    val morty = new Person("Morty", 11, "Male")
-    val summer = new Person("Summer", 17, "Female")
-    val jerry = new Person("Jerry", 42, "Male")
+    val rick =  Person("Rick", 65, "Male")
+    val morty =  Person("Morty", 11, "Male")
+    val summer =  Person("Summer", 17, "Female")
+    val jerry =  Person("Jerry", 42, "Male")
+
+    val peopleList = List(rick, morty, summer, jerry)
+    peopleList.foreach( (i: Person) => i.printPerson(i))
+
+    //same as above but different method
 
     rick.printPerson(rick)
     morty.printPerson(morty)
@@ -22,7 +27,7 @@ object Main {
     dog.isAlive = true
     dog.printFields()
 
-    val concert = new Event("Adele", "October 17th", "Bridgestone")
+    val concert = Event("Adele", "October 17th", "Bridgestone")
     concert.printEvent(concert)
 
   }
