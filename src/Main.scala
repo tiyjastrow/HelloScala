@@ -12,23 +12,19 @@ object Main {
     val jerry =  Person("Jerry", 42, "Male")
 
     val peopleList = List(rick, morty, summer, jerry)
-    peopleList.foreach( (i: Person) => i.printPerson(i))
+    peopleList.foreach( (i: Person) => println(i.toString))
 
     //same as above but different method
-
-    rick.printPerson(rick)
-    morty.printPerson(morty)
-    summer.printPerson(summer)
-    jerry.printPerson(jerry)
+    println(jerry.toString)
 
     val dog = new Dog()
     dog.name = "Moose"
     dog.breed = "Lab"
     dog.isAlive = true
-    dog.printFields()
+    println(dog.toString)
 
     val concert = Event("Adele", "October 17th", "Bridgestone")
-    concert.printEvent(concert)
+    println(concert.toString)
 
   }
   }

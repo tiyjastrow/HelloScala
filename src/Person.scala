@@ -4,8 +4,7 @@
   */
 case class Person(val name: String, val age: Int, val gender: String) {
 
-def printPerson(x: Person): Unit = {
-  println(s"Name = $name, Age = $age, Gender = $gender\n")
+override def toString = s"Name = $name, Age = $age, Gender = $gender\n"
 
-}}
+}
 
