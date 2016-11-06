@@ -3,11 +3,10 @@
   */
 object Main {
   def main(args: Array[String]): Unit = {
-    val killingFloor = new Book("Killing Floor", "Lee Child", false, 2000)
-    Book.showBook(killingFloor)
-    Book.showAuthor(killingFloor)
-    killingFloor.read = true
-    Book.showRead(killingFloor)
+    val slaughterhouseFive = new Book("Slaughthouse Five", "Vonnegut", true, 1960)
+    Seq(slaughterhouseFive.showRead, slaughterhouseFive.showAuthor,
+      slaughterhouseFive.showTitle, slaughterhouseFive.showYear)
+
 
     val balloon = new Balloon
     balloon.howMany = 99

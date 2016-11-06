@@ -1,6 +1,7 @@
-
-class Clown {
+/*
   //Minimal definition of a clown
+ */
+class Clown {
   var name = ""
   var scary = false
   var whatKind = ""
