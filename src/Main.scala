@@ -12,7 +12,9 @@ object Main {
         println(s"You bought ${dollarGeneral.items} from ${dollarGeneral.store} for $$${dollarGeneral.price}.")
 
         // InventoryItem Class
-        val iceCubes = InventoryItem("ice cubes", 12034)
-        println(s"Your store currently has ${iceCubes.quantity} ${iceCubes.label}.")
+        val iceCubes = new InventoryItem("ice cubes", 12034)
+        println(iceCubes.toString)
+        iceCubes.quantity += 1
+        println(iceCubes.toString)
     }
 }

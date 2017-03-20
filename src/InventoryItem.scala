@@ -1,5 +1,7 @@
 
 // keep up with inventory through a list of each inventory item and quantity
-case class InventoryItem (label: String, quantity: Int) {
-
+class InventoryItem (val label: String, var quantity: Int) {
+    override def toString: String = {
+        s"Your store currently has ${this.quantity} ${this.label}."
+    }
 }
