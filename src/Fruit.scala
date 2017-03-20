@@ -9,7 +9,8 @@ class Fruit (val xname: String, val xsugar: Int, val xwater: Double){
   def eatQuantity (x: Int): Unit ={
     totalCalories = totalCalories * x
     liters = liters * x
+    println(s"You ate $totalCalories calories of $name and $liters liters of water.")
   }
 
-  override def toString: String = s"You ate $totalCalories calories of $name and $liters liters of water."
+  override def toString: String = s"The fruit named $name has $sugar grams sugar, $water grams water, and $totalCalories calories."
 }
